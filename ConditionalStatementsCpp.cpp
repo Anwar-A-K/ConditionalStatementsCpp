@@ -7,7 +7,51 @@ using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int playerHealth;
+    int enemyHealth;
+    
+    cout << "Enter player Health: ";
+    cin >> playerHealth;
+    cout << "Enter enemy health: ";
+    cin >> enemyHealth;
+    cout << endl;
+
+    if (playerHealth == 100) {
+        cout << "Player is full health" << endl;
+    }
+    else if (playerHealth == 50) {
+        cout << "Player is half health" << endl;
+    }
+    else if (playerHealth <= 0) {
+        cout << "Player is dead" << endl;
+    }
+
+    if (playerHealth > 0) {
+        if (enemyHealth == 100) {
+            cout << "Enemy is full health" << endl;
+        }
+        else if (enemyHealth == 50) {
+            cout << "Enemy is half health" << endl;
+        }
+        else if (enemyHealth <= 0) {
+            cout << "Enemy is dead" << endl;
+        }
+    }
+
+    if (playerHealth == 0 || enemyHealth == 0) {
+        cout << "Game Over" << endl;
+
+        if (playerHealth == 0 && enemyHealth == 0) {
+            cout << "Game is a draw" << endl;
+        }
+        else if (playerHealth <= 0) {
+            cout << "Enemy Won" << endl;
+        }
+        else if (enemyHealth <= 0) {
+            cout << "Player Won" << endl;
+        }
+    }
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
